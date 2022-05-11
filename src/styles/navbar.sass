@@ -1,0 +1,72 @@
+.nav-container
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: var(--size-fluid-2)
+
+.nav-links,
+.nav-wrapper
+    display: flex
+    align-content: center
+    background-color: hsl(var(--primary))
+    gap: var(--size-3)
+    height: 100px
+
+.nav-links
+    flex-direction: column
+    transform: translateY(-200%)
+    position: absolute
+    top: var(--size-fluid-4)
+    left: 0
+    right: 0
+    text-align: center
+    padding: var(--size-3)
+    border-bottom: 2px solid hsl(var(--gray))
+
+.logo
+    position: absolute
+    transform: (translate(-50%, -50%))
+    top: 50%
+    right: 50%
+
+li[role='none'],
+.nav-link
+    width: 100%
+    display: block
+    font-size: var(--font-size-1)
+
+    .btn--menu[aria-expanded='true'] + .nav-link
+        transform: translateY(0)
+
+.btn--link
+    border-bottom: 1px solid hsl(var(--accent))
+
+    &:hover
+        color: hsl(var(--text) / 0.7) !important
+        background-color: hsl(var(--accent)) !important
+
+.btn--menu
+    display: grid
+    place-items: center
+    border: none
+    padding-inline: var(--size-2)
+
+@media (min-width: 900px)
+    .nav-wrapper
+        gap: var(--size-4)
+
+    .btn--menu
+        display: none
+
+    .nav-links
+        flex-direction: row
+        position: static
+        transform: translateY(0)
+        border: none
+        background-color: transparent
+        align-items: center
+
+    li[role='none'],
+    .nav-link
+        width: initial
+        font-size: var(--font-size-0)
