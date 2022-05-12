@@ -12,3 +12,6 @@ export default defineComponent({
   },
 });
 </script>
+<style lang='sass'>
+@import "../styles/footer.sass"
+</style>

@@ -2,13 +2,13 @@
   <nav>
     <div class="nav-wrapper">
       <button
-        class="btn btn--menu"
+        class="btn--primary btn--menu"
         id="menu-btn"
-        @click="isNavBarExpanded === 'false' ? 'true' : 'false'"
+        @click="changeMobileNavigationState"
         :aria-expanded="isNavBarExpanded"
         aria-label="Otwórz mobilną nawigacje"
       >
-        <menuIcon style="width: 25px; height: 25px" />
+        <menuIcon class="nav-icon" />
       </button>
       <ul class="nav-links" role="navigation">
         <li v-for="(link, index) in navLink" :key="index" role="none">
@@ -23,11 +23,12 @@
     </div>
   </nav>
 </template>
-<script>
+<script lang="ts">
 import menuIcon from "../icons/manu.svg";
+import logo from "../icons/logo.svg";
 import { defineComponent, ref } from "vue";
 export default defineComponent({
-  components: { menuIcon },
+  components: { menuIcon, logo },
   setup() {
     const isNavBarExpanded = ref("false");
     const navLink = [
@@ -47,8 +48,13 @@ export default defineComponent({
         style: "transparent",
       },
     ];
+    const changeMobileNavigationState = () => {
+      isNavBarExpanded.value === "false"
+        ? (isNavBarExpanded.value = "true")
+        : (isNavBarExpanded.value = "false");
+    };
 
-    return { navLink, isNavBarExpanded };
+    return { navLink, isNavBarExpanded, changeMobileNavigationState };
   },
 });
 </script>
