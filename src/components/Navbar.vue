@@ -2,13 +2,13 @@
   <nav>
     <div class="nav-wrapper">
       <button
-        class="btn--primary btn--menu"
+        class="bg-primary btn btn--menu"
         id="menu-btn"
         @click="changeMobileNavigationState"
         :aria-expanded="isNavBarExpanded"
         aria-label="Otwórz mobilną nawigacje"
       >
-        <menuIcon class="nav-icon" />
+        <menuIcon class="icon--sm" />
       </button>
       <ul class="nav-links" role="navigation">
         <li v-for="(link, index) in navLink" :key="index" role="none">
@@ -21,14 +21,16 @@
         </li>
       </ul>
     </div>
+    <WaverShape />
   </nav>
 </template>
 <script lang="ts">
+import WaverShape from "../components/WaverShape.vue";
 import menuIcon from "../icons/manu.svg";
 import logo from "../icons/logo.svg";
 import { defineComponent, ref } from "vue";
 export default defineComponent({
-  components: { menuIcon, logo },
+  components: { menuIcon, logo, WaverShape },
   setup() {
     const isNavBarExpanded = ref("false");
     const navLink = [

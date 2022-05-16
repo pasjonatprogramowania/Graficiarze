@@ -11,19 +11,10 @@ picture,
 svg
     max-width: 100%
     display: block
+    object-fit: cover
 
-:root
-    --librus: 320 25% 48%
-    --tiktok: 348 99% 58%
-    --facebook: 220 46% 48%
-    --gray: 160 2% 79%
-    --accent-lite: 160 54% 79%
-    --accent: 161 55% 68%
-    --gradient: linear-gradient(95deg, hsl(var(--primary), hsl(var(--accent-lite))))
-    --white: 160 53% 97%
-    --text: 200 6% 10%
-    --primary: 161 55% 60%
-
+img
+    object-fit: cover
 @media (min-width: 768px)
     html
         font-size: 130%
@@ -35,8 +26,9 @@ body
     max-width: 2000px
     background-color: hsl(var(--white))
     color: hsl(var(--text))
+    overflow-x: hidden
 
-.wrapper
+.wrapper--main
     display: grid
     grid-template-rows: auto 1fr auto
     min-height: 100vh
@@ -44,77 +36,5 @@ body
 main
     display: grid
     gap: var(--size-fluid-6)
-    padding: var(--size-fluid-5) var(--size-fluid-2)
-
-/* Utility */
-.container
-    width: 100%
-    max-width: 1500px
-    margin: auto
-
-    &-sm
-        width: 100%
-        max-width: 1200px
-        margin: auto
-
-    &-xs
-        width: 100%
-        max-width: 900px
-        margin: auto
-
-.text-white
-    color: hsl(var(--primary))
-
-.text-text
-    color: hsl(var(--text))
-
-.text-primary
-    color: hsl(var(--primary))
-
-.text-accect
-    color: hsl(var(--accect))
-
-.text-accent-lite
-    color: hsl(var(--accent-lite))
-
-.h1
-    font-size: var(--font-size-fluid-3)
-    font-weight: 600
-    line-height: 1.1
-
-.h2
-    font-size: var(--font-size-fluid-2)
-    font-weight: 600
-    line-height: 1.1
-
-.h3
-    font-size: var(--font-size-fluid-1)
-    font-weight: 600
-    line-height: 1.1
-
-.grid-sm
-    display: grid
-    place-items: center
-    gap: var(--size-fluid-1)
-
-.grid-md
-    display: grid
-    place-items: center
-    gap: var(--size-fluid-2)
-
-.grid-lg
-    display: grid
-    place-items: center
-    gap: var(--size-fluid-3)
-
-.btn
-    color: hsl(var(--white))
-    text-decoration: none
-    padding: var(--size-2) var(--size-fluid-4)
-    border-radius: var(--radius-1)
-.btn--primary
-    color: hsl(var(--white))
-    text-decoration: none
-    padding: var(--size-2) var(--size-fluid-4)
-    background-color: hsl(var(--primary))
-    border-radius: var(--radius-1)
+    margin-bottom: var(--size-fluid-5)
+    margin-top: var(--size-fluid-5)

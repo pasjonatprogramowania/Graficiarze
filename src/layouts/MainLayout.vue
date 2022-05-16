@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper--main">
     <Navbar />
     <Hero />
     <main>
@@ -19,5 +19,6 @@ export default defineComponent({
 </script>
 <style lang="sass">
 @import "../styles/mainLayout.sass"
+@import "../styles/variables.sass"
+@import "../styles/utilitys.sass"
 </style>
-
