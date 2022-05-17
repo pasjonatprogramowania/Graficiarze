@@ -16,6 +16,6 @@
 import { defineComponent } from "vue";
 export default defineComponent({});
 </script>
-<style lang="sass">
+<style lang="sass" >
 @import '../styles/waverShape.sass'
 </style>

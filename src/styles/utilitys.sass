@@ -1,5 +1,5 @@
 /* Utility */
-.title-wrapper
+.wrapper--title
   display: grid
   gap: var(--size-3)
   vertical-align: middle
@@ -20,7 +20,7 @@
   color: hsl(var(--accent-lite))
 
 .bg-white
-  background-color: hsl(var(--primary))
+  background-color: hsl(var(--white))
 
 .bg-text
   background-color: hsl(var(--text))
@@ -30,6 +30,9 @@
 
 .bg-accect
   background-color: hsl(var(--accect))
+
+.bg--gray
+  background-color: hsl(var(--gray))
 
 .bg-accent-lite
   background-color: hsl(var(--accent-lite))
@@ -50,13 +53,14 @@
   line-height: 1.1
 
 .btn
-  color: hsl(var(--white))
+  color: hsl(var(--text))
   text-decoration: none
   padding: var(--size-2) var(--size-fluid-4)
   border-radius: var(--radius-1)
   border: none
 
 .btn--primary
+  box-shadow: var(--shadow-2)
   background-color: hsl(var(--primary))
 
 .wrapper
@@ -70,3 +74,25 @@
 
 .icon--lg
   width: var(--size-fluid-7)
+
+@media (max-width: 1440px)
+  .only-desktop
+    display: none
+.grid
+  display: grid
+
+.gap--xs
+  gap: var(--size-fluid-2)
+.gap--sm
+  gap: var(--size-fluid-4)
+.gap
+  gap: var(--size-fluid-8)
+.p--md
+  padding: var(--size-10)
+
+.m--md
+  padding: var(--size-10)
+
+.p-y--lg
+  padding-top: var(--size-12)
+  padding-bottom: var(--size-12)

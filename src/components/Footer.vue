@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="text--text">
     <small>Copyright Graficiarze © 2021 - {{ curruentYear }}</small>
   </footer>
 </template>
