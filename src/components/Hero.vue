@@ -1,6 +1,6 @@
 <template>
   <div class="banner--hero">
-    <div class="container--hero gap">
+    <div class="container--hero gap--xs">
       <logo class="only-desktop icon--lg" />
       <div class="wrapper--title">
         <h1 class="h1 hero-title">Graficiarze</h1>
@@ -9,9 +9,6 @@
     </div>
   </div>
 </template>
-<style lang='sass'>
-@import '../styles/hero.sass'
-</style>
 <script lang='ts'>
 import { defineComponent } from "vue";
 import logo from "../icons/logo.svg";
@@ -19,3 +16,29 @@ export default defineComponent({
   components: { logo },
 });
 </script>
+<style lang='sass'>
+.hero-title
+  color: hsl(var(--white))
+  border-bottom: 2px solid hsl(var(--white))
+.hero-subtitle
+  color: hsl(var(--text))
+  background-color: hsl(var(--white))
+
+.banner--hero
+  width: 100vw
+  min-height: var(--size-fluid-10)
+  background-image: url("../img/hero.jpg")
+  place-items: center
+  display: grid
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  z-index: 1
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%)
+.container--hero
+  display: flex
+  justify-content: center
+@media (max-width: 700px)
+  .banner--hero
+    min-height: calc(var(--size-fluid-10) * 1.2)
+</style>

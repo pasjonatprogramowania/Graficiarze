@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="custom-shape-divider-top-1652426427">
+    <div class="custom-shape-divider-top-1652426427 absolute--top">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
@@ -17,5 +17,26 @@ import { defineComponent } from "vue";
 export default defineComponent({});
 </script>
 <style lang="sass" >
-@import '../styles/waverShape.sass'
+.container
+  z-index: 10
+  position: relative
+  width: 100vw
+.custom-shape-divider-top-1652426427
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  overflow: hidden
+  line-height: 0
+  z-index: 100
+  & svg
+    position: relative
+    display: block
+    width: calc(139% + 1.3px)
+    height: var(--size-fluid-3)
+
+  & .shape-fill
+    fill: hsl(var(--primary))
+.absolute--top
+  z-index: 1000
 </style>

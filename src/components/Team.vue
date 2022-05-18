@@ -1,86 +1,74 @@
 <template>
   <div class="bg--gray container--wrapper-team">
     <div class="container--team">
-      <h3 class="h3 team--name">Sociale</h3>
-      <div class="wrapper--avatars">
-        <div class="column gap--sm">
+      <h3 class="h3 team--name">Lider</h3>
+      <div class="wrapper--avatars gap--xs">
+        <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary btn--team">Lorem Ipsum</button>
+          <button class="btn btn--primary">Paweł Szewczyk</button>
+        </div>
+      </div>
+    </div>
+    <div class="container--team">
+      <h3 class="h3 team--name">Graficy</h3>
+      <div class="wrapper--avatars gap--xs">
+        <div class="column gap--xs">
+          <img src="../img/avatar.jpg" class="img--avatar" alt="" />
+          <button class="btn btn--primary">Asia Ziółczynsak</button>
+        </div>
+        <div class="wrapper--avatars gap--xs">
+          <div class="column gap--xs">
+            <img src="../img/avatar.jpg" class="img--avatar" alt="" />
+            <button class="btn btn--primary">Justyna Chojnacka</button>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper--avatars gap--xs">
+        <div class="column gap--xs">
+          <img src="../img/avatar.jpg" class="img--avatar" alt="" />
+          <button class="btn btn--primary">Olga Szlifirczyk</button>
         </div>
       </div>
     </div>
     <div class="container--team">
       <h3 class="h3 team--name">Sociale</h3>
-      <div class="wrapper--avatars">
-        <div class="column gap--sm">
+      <div class="wrapper--avatars gap--xs">
+        <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary btn--team">Lorem Ipsum</button>
+          <button class="btn btn--primary">Krzysztof Rafalik</button>
         </div>
-        <div class="column gap--sm">
-          <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary btn--team">Lorem Ipsum</button>
-        </div>
-      </div>
-      <div class="wrapper--avatars">
-        <div class="column gap--sm">
-          <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary btn--team">Lorem Ipsum</button>
+        <div class="wrapper--avatars gap--xs">
+          <div class="column gap--xs">
+            <img src="../img/avatar.jpg" class="img--avatar" alt="" />
+            <button class="btn btn--primary">Oparcik Grzegorz</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container--team">
-      <h3 class="h3 team--name">Sociale</h3>
-      <div class="wrapper--avatars">
-        <div class="column gap--sm">
+      <div class="wrapper--avatars gap--xs">
+        <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary btn--team">Lorem Ipsum</button>
-        </div>
-        <div class="column gap--sm">
-          <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary btn--team">Lorem Ipsum</button>
-        </div>
-      </div>
-      <div class="wrapper--avatars">
-        <div class="column gap--sm">
-          <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary btn--team">Lorem Ipsum</button>
+          <button class="btn btn--primary">Robert Mikulski</button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script lang="ts">
-import avatar from "../img/avatar.jpg";
 import { defineComponent } from "vue";
 
-export default defineComponent({
-  setup() {
-    const socialTeam = [
-      { url: avatar, name: "lorem Ipsum" },
-      { url: avatar, name: "lorem Ipsum" },
-      { url: avatar, name: "lorem Ipsum" },
-    ];
-    const graficTeam = [
-      { url: avatar, name: "lorem Ipsum" },
-      { url: avatar, name: "lorem Ipsum" },
-      { url: avatar, name: "lorem Ipsum" },
-    ];
-    const leaderTeam = [{ url: avatar, name: "lorem Ipsum" }];
-    return { socialTeam, graficTeam, leaderTeam };
-  },
-});
+export default defineComponent({});
 </script>
 <style lang="sass">
+@media (max-width:1224px)
+  .container--wrapper-team
+    flex-direction: column
+    justify-content: center
 .container--wrapper-team
   display: flex
   justify-content: space-around
-  @media (min-width:900px)
-    .container--wrapper-team
-      flex-direction: column !important
-      justify-content: center !important
-.btn--team
-  margin-left: auto
-  margin-right: auto
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%)
+  padding-top: var(--size-10)
+  padding-bottom: var(--size-10)
 .container--team
   padding-bottom: var(--size-4)
   padding-top: var(--size-4)
@@ -98,9 +86,4 @@ export default defineComponent({
   width: var(--size-fluid-6)
   margin-left: auto
   margin-right: auto
-// @media (max-width:900px)
-//   .wrapper--avatars
-//     flex-direction: column
-//     justify-content: center
-//     gap: var(--size-fluid-6)
 </style>

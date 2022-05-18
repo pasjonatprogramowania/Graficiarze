@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper--main">
     <Navbar />
+
     <Hero />
     <main>
       <slot />

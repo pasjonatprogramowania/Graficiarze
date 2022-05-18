@@ -4,37 +4,37 @@
   gap: var(--size-3)
   vertical-align: middle
 
-.text-white
+.text--white
   color: hsl(var(--primary))
 
-.text-text
+.text--text
   color: hsl(var(--text))
 
-.text-primary
+.text--primary
   color: hsl(var(--primary))
 
-.text-accect
+.text--accect
   color: hsl(var(--accect))
 
-.text-accent-lite
+.text--accent-lite
   color: hsl(var(--accent-lite))
 
-.bg-white
+.bg--white
   background-color: hsl(var(--white))
 
-.bg-text
+.bg--text
   background-color: hsl(var(--text))
 
-.bg-primary
+.bg--primary
   background-color: hsl(var(--primary))
 
-.bg-accect
+.bg--accent
   background-color: hsl(var(--accect))
 
 .bg--gray
   background-color: hsl(var(--gray))
 
-.bg-accent-lite
+.bg--accent-lite
   background-color: hsl(var(--accent-lite))
 
 .h1
@@ -51,17 +51,57 @@
   font-size: var(--font-size-fluid-1)
   font-weight: 600
   line-height: 1.1
+.shadow
+  box-shadow: var(--shadow-3)
 
+/* CSS */
 .btn
-  color: hsl(var(--text))
-  text-decoration: none
-  padding: var(--size-2) var(--size-fluid-4)
-  border-radius: var(--radius-1)
-  border: none
+  border: 0 solid hsl(var(--white))
+  box-sizing: border-box
+  color: #000000
+  display: flex
+  font-size: var(--font-size-1)
+  font-weight: 700
+  justify-content: center
+  line-height: 1.75rem
+  padding: var(--size-2) var(--size-fluid-2)
+  position: relative
+  text-align: center
+  text-decoration: none hsl(var(--text)) solid
+  text-decoration-thickness: auto
+  width: 100%
+  max-width: 460px
+  position: relative
+  cursor: pointer
+  transform: rotate(-2deg)
+  user-select: none
+  -webkit-user-select: none
+  touch-action: manipulation
+
+  &:focus
+    outline: 0
+
+  &:after
+    content: ''
+    position: absolute
+    border: 1px solid hsl(var(--text))
+    bottom: 4px
+    left: 4px
+    width: calc(100% - 1px)
+    height: calc(100% - 1px)
+
+  &:hover:after
+    bottom: 2px
+    left: 2px
+
+@media (min-width: 768px)
+  .btn
+    padding: .75rem 3rem
+    font-size: 1.25rem
 
 .btn--primary
-  box-shadow: var(--shadow-2)
   background-color: hsl(var(--primary))
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
 
 .wrapper
   display: flex

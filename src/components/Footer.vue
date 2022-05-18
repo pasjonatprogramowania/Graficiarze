@@ -13,5 +13,9 @@ export default defineComponent({
 });
 </script>
 <style lang='sass'>
-@import "../styles/footer.sass"
+footer
+  display: flex
+  justify-content: center
+  padding: var(--size-2)
+  background-color: hsl(var(--primary))
 </style>

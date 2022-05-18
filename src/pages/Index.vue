@@ -1,5 +1,8 @@
 <template>
-  <MainLayout><About /><Gallery /><Team /> </MainLayout>
+  <MainLayout>
+    <About />
+    <Gallery /><Team />
+  </MainLayout>
 </template>
 <script lang="ts">
 import Team from "../components/Team.vue";

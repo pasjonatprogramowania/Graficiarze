@@ -4,7 +4,7 @@
       <div class="title-container--about gap--sm">
         <div class="wrapper--title title-container--sm">
           <h2 class="h2">lorem ipsum</h2>
-          <p>
+          <p class="text-about">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
             quod ea adipisci cumque odit ut ullam, rerum amet culpa totam atque
             beatae sint quis quam nemo consequuntur eligendi ipsam minima quas
@@ -29,5 +29,23 @@ import { defineComponent } from "vue";
 export default defineComponent({});
 </script>
 <style lang="sass">
-@import '../styles/about.sass'
+.text-about
+  max-width: 800px
+.icon--map
+  margin-right: auto
+  margin-left: auto
+.container-about--btn-map
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin-right: auto
+.title-container--about
+  display: flex
+  flex-direction: column
+.img--arrow-map
+  display: flex
+  justify-content: center
+.margin-x--about
+  margin-left: var(--size-fluid-4)
+  margin-right: var(--size-fluid-4)
 </style>
