@@ -1,8 +1,8 @@
 <template>
-  <div class="margin-x--about">
+  <div class="margin-x">
     <div class="wrapper gap--sm">
       <div class="title-container--about gap--sm">
-        <div class="wrapper--title title-container--sm">
+        <TextField>
           <h2 class="h2">lorem ipsum</h2>
           <p class="text-about">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
@@ -12,7 +12,7 @@
             aliquam neque mollitia nulla sapiente exercitationem vel, odit rerum
             dolor excepturi consectetur possimus iste.
           </p>
-        </div>
+        </TextField>
         <div class="img--arrow-map">
           <img class="icon--lg" src="../icons/arrow-map.svg" alt="" />
         </div>
@@ -25,12 +25,11 @@
   </div>
 </template>
 <script lang='ts'>
+import TextField from "./TextField.vue";
 import { defineComponent } from "vue";
-export default defineComponent({});
+export default defineComponent({ components: { TextField } });
 </script>
 <style lang="sass">
-.text-about
-  max-width: 800px
 .icon--map
   margin-right: auto
   margin-left: auto
@@ -45,7 +44,4 @@ export default defineComponent({});
 .img--arrow-map
   display: flex
   justify-content: center
-.margin-x--about
-  margin-left: var(--size-fluid-4)
-  margin-right: var(--size-fluid-4)
 </style>
