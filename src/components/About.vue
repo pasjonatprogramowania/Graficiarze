@@ -14,10 +14,10 @@
           </p>
         </TextField>
         <div class="img--arrow-map">
-          <img class="icon--lg" src="../icons/arrow-map.svg" alt="" />
+          <img class="icon--lg" src="../img/arrow-map.svg" alt="" />
         </div>
         <div class="container-about--btn-map">
-          <img class="icon--lg icon--map" src="../icons/map.svg" alt="" />
+          <img class="icon--lg icon--map" src="../img/map.svg" alt="" />
           <button class="btn btn--primary">lorem ipsum</button>
         </div>
       </div>

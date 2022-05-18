@@ -11,7 +11,7 @@
 </template>
 <script lang='ts'>
 import { defineComponent } from "vue";
-import logo from "../icons/logo.svg";
+import logo from "../img/logo.svg";
 export default defineComponent({
   components: { logo },
 });

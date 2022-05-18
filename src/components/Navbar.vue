@@ -27,7 +27,7 @@
 <script lang="ts">
 import WaverShape from "../components/WaverShape.vue";
 import menuIcon from "../icons/manu.svg";
-import logo from "../icons/logo.svg";
+import logo from "../img/logo.svg";
 import { defineComponent, ref } from "vue";
 export default defineComponent({
   components: { menuIcon, logo, WaverShape },
