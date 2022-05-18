@@ -1,5 +1,5 @@
 <template>
-  <div class="bg--gray container--team">
+  <div class="bg--gray container--wrapper-team">
     <div class="container--team">
       <h3 class="h3 team--name">Sociale</h3>
       <div class="wrapper--avatars">
@@ -71,6 +71,13 @@ export default defineComponent({
 });
 </script>
 <style lang="sass">
+.container--wrapper-team
+  display: flex
+  justify-content: space-around
+  @media (min-width:900px)
+    .container--wrapper-team
+      flex-direction: column !important
+      justify-content: center !important
 .btn--team
   margin-left: auto
   margin-right: auto
@@ -88,7 +95,7 @@ export default defineComponent({
   text-align: center
 .img--avatar
   border-radius: 100%
-  width: var(--size-fluid-7)
+  width: var(--size-fluid-6)
   margin-left: auto
   margin-right: auto
 // @media (max-width:900px)

@@ -1,5 +1,5 @@
 <template>
-  <div class="container-about">
+  <div class="margin-x--about">
     <div class="wrapper gap--sm">
       <div class="title-container--about gap--sm">
         <div class="wrapper--title title-container--sm">
@@ -13,15 +13,14 @@
             dolor excepturi consectetur possimus iste.
           </p>
         </div>
-        <div class="arrow--map">
+        <div class="img--arrow-map">
           <img class="icon--lg" src="../icons/arrow-map.svg" alt="" />
         </div>
         <div class="container-about--btn-map">
-          <img class="icon--lg about-map" src="../icons/map.svg" alt="" />
+          <img class="icon--lg icon--map" src="../icons/map.svg" alt="" />
           <button class="btn btn--primary">lorem ipsum</button>
         </div>
       </div>
-      <img class="img-about only-desktop" src="../img/about.jpg" alt="" />
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
-  <div class="hero-banner">
-    <div class="hero-box gap">
+  <div class="banner--hero">
+    <div class="container--hero gap">
       <logo class="only-desktop icon--lg" />
       <div class="wrapper--title">
         <h1 class="h1 hero-title">Graficiarze</h1>

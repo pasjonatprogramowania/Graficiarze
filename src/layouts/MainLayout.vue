@@ -18,6 +18,7 @@ export default defineComponent({
 });
 </script>
 <style lang="sass">
+@import '../styles/main.sass'
 @import "../styles/mainLayout.sass"
 @import "../styles/variables.sass"
 @import "../styles/utilitys.sass"
