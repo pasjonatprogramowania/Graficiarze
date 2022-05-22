@@ -27,6 +27,8 @@
     background-color: hsl(var(--gray))
   &--accent-lite
     background-color: hsl(var(--accent-lite))
+  &--gradient
+    background: linear-gradient(90deg,hsl(var(--primary)), hsl(var(--accent)))
 
 .h1
   font-size: var(--font-size-fluid-3)
@@ -68,12 +70,13 @@
   user-select: none
   -webkit-user-select: none
   touch-action: manipulation
-
+  border-radius: var(--size-3)
   &:focus
     outline: 0
 
   &:after
     content: ''
+    border-radius: var(--size-3)
     position: absolute
     border: 1px solid hsl(var(--text))
     bottom: 4px
@@ -137,6 +140,8 @@
 .icon
   &--sm
     width: var(--size-5)
+  &--md
+    width: var(--size-fluid-4)
   &--lg
     width: var(--size-fluid-7)
 .p--md
@@ -153,3 +158,32 @@
 @media (max-width: 1440px)
   .only-desktop
     display: none
+
+.grid--social
+  display: grid
+  gap: var(--size-6)
+  grid-template-columns: repeat(3,1fr)
+  grid-template-rows: 1fr
+  margin-left: var(--size-8)
+  margin-right: var(--size-8)
+  @media (max-width: 1024px)
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+.grid--companies
+  display: grid
+  gap: var(--size-6)
+  grid-template-columns: repeat(4,1fr)
+  grid-template-rows: 1fr
+  margin-left: var(--size-8)
+  margin-right: var(--size-8)
+  @media (max-width: 1024px)
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+
+.grid-budget
+  display: grid
+  gap: var(--size-6)
+  grid-template-rows: 1fr
+  margin-left: var(--size-8)
+  margin-right: var(--size-8)
+  grid-template-columns: 1fr

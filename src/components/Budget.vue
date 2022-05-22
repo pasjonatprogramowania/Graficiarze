@@ -1,15 +1,39 @@
 <template>
-  <div class="column gap--sm">
-    <h2 class="h2 bg--gray title--header p--md">Współpracy z...</h2>
-    <div class="wrapper--space bg--primary p--md mobile--column">
-      <img class="img--companies" src="../img/rohis.png" alt="" />
-    </div>
+  <h2 class="h2 bg--primary title--header p--md">Pozyskiwania funduszy</h2>
+  <div class="grid--budget">
+    <Card v-for="(company, i) in companiesData" :key="`${i}-budget`">
+      <template #company-img>
+        <img class="img--companies" :src="company.img" alt="" />
+      </template>
+      <template #company-title>
+        <h1 class="h3 container-card--title">{{ company.title }}</h1>
+      </template>
+      <template #company-subtitle>
+        <p class="bg--gradient container-card--subtitle">
+          {{ company.subtitle }}
+        </p>
+      </template>
+    </Card>
   </div>
 </template>
 <script lang="ts">
+import rohis from "../img/rohis.png";
 import { defineComponent } from "vue";
-
-export default defineComponent({});
+import Card from "../components/Card.vue";
+export default defineComponent({
+  setup() {
+    const companiesData = [
+      {
+        img: rohis,
+        title: "ROHiS",
+        subtitle:
+          "Z harcerskiego funduszu ROHiS pozyskaliśmy 1200zł na realizacje imprezy malarskiej w naszej strefie",
+      },
+    ];
+    return { companiesData };
+  },
+  components: { Card },
+});
 </script>
 <style lang="sass">
 </style>l

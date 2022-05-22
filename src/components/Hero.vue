@@ -8,6 +8,9 @@
       </div>
     </div>
   </div>
+  <div>
+    <img src="../img/scroll.gif" class="icon--md img--scroll" alt="" />
+  </div>
 </template>
 <script lang='ts'>
 import { defineComponent } from "vue";
@@ -17,6 +20,11 @@ export default defineComponent({
 });
 </script>
 <style lang='sass'>
+.img--scroll
+  margin-top: 20px
+  margin-left: auto
+  margin-right: auto
+  filter: grayscale(1)
 .hero-title
   color: hsl(var(--white))
   border-bottom: 2px solid hsl(var(--white))
@@ -35,6 +43,7 @@ export default defineComponent({
   background-size: cover
   z-index: 1
   clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%)
+
 .container--hero
   display: flex
   justify-content: center

@@ -29,6 +29,7 @@ export default defineComponent({});
   overflow: hidden
   line-height: 0
   z-index: 100
+
   & svg
     position: relative
     display: block
@@ -37,6 +38,7 @@ export default defineComponent({});
 
   & .shape-fill
     fill: hsl(var(--primary))
+
 .absolute--top
   z-index: 1000
 </style>

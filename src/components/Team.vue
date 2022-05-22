@@ -14,7 +14,7 @@
       <div class="wrapper--avatars gap--xs">
         <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary">Asia Ziółczynsak</button>
+          <button class="btn btn--primary">Asia Ziółczyńska</button>
         </div>
         <div class="wrapper--avatars gap--xs">
           <div class="column gap--xs">

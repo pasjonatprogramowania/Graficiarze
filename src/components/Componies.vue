@@ -1,33 +1,72 @@
 <template>
-  <div class="column gap--sm">
-    <h2 class="h2 bg--gray title--header p--md">Współpracy z...</h2>
-    <div class="wrapper--space bg--primary p--md mobile--column">
-      <img class="img--companies" src="../img/zhp.png" alt="" />
-      <img class="img--companies" src="../img/mzdik.png" alt="" />
-      <img class="img--companies" src="../img/lop.png" alt="" />
-      <img class="img--companies" src="../img/zwzt.png" alt="" />
-    </div>
+  <h2 class="h2 bg--primary title--header p--md">Współpracy z...</h2>
+  <div class="grid--companies">
+    <Card v-for="(company, i) in companiesData" :key="`${i}-company`">
+      <template #company-img>
+        <img class="img--companies" :src="company.img" alt="" />
+      </template>
+      <template #company-title>
+        <h1 class="h3 container-card--title">{{ company.title }}</h1>
+      </template>
+      <template #company-subtitle>
+        <p class="bg--gradient container-card--subtitle">
+          {{ company.subtitle }}
+        </p>
+      </template>
+    </Card>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-
-export default defineComponent({});
+import zhp from "../img/zhp.png";
+import mzdik from "../img/mzdik.png";
+import lop from "../img/lop.png";
+import zwzt from "../img/zwzt.png";
+import Card from "../components/Card.vue";
+export default defineComponent({
+  setup() {
+    const companiesData = [
+      {
+        img: zhp,
+        title: "Hufiec Radom-Miasto",
+        subtitle:
+          "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
+      },
+      {
+        img: lop,
+        title: "Liga Ochrony Przyrody",
+        subtitle:
+          "Dzieki wsparciu organizacji LOP, uzyskalismy potrzebne osobowość prawno do uzyskania pozwolenia na urzytek sciany od miasta",
+      },
+      {
+        img: mzdik,
+        title: "Miejski zarząd dróg i komunikacji",
+        subtitle:
+          "Udzieliło nam pozwolenia na uzytek scian przejscia podziemnego na Grzecznarowskiego jako strefe graffiti free  ",
+      },
+      {
+        img: zwzt,
+        title: "Zwolnieni z teorii",
+        subtitle:
+          "Otrzymalismy wsparcie merytoryczne, szkolenia z zakresu zarzadzania projektem, oraz promocji projektu w social mediach ",
+      },
+    ];
+    return { companiesData };
+  },
+  components: { Card },
+});
 </script>
 <style lang="sass">
-.img--companies
-  object-fit: contain
-  filter: grayscale(1)
-  &:hover
-    filter: grayscale(0)
-    transition: 0.5s
-  @media (max-width:900px)
-    margin: 20px auto
-    max-width: 200px
 .title--header
   text-align: center
+  width: var(--size-fluid-10)
+  margin-left: auto
+  margin-right: auto
+  border-radius: var(--size-3)
+  transform: rotate(-2deg)
+  box-shadow: var(--shadow-3)
 .mobile--column
-  @media (max-width:900px)
+  @media (max-width:1024px)
     display: flex
     justify-content: center
     flex-direction: column
