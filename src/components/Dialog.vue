@@ -1,4 +1,4 @@
-<template><h2 class="h2">Siema</h2></template>
+<template><slot /></template>
 <script lang="ts">
 import { defineComponent } from "vue";
 
