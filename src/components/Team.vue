@@ -5,7 +5,9 @@
       <div class="wrapper--avatars gap--xs">
         <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary">Paweł Szewczyk</button>
+          <button class="btn btn--primary" @click="dialogState = true">
+            Paweł Szewczyk
+          </button>
         </div>
       </div>
     </div>
@@ -14,19 +16,25 @@
       <div class="wrapper--avatars gap--xs">
         <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary">Asia Ziółczyńska</button>
+          <button class="btn btn--primary" @click="dialogState = true">
+            Asia Ziółczyńska
+          </button>
         </div>
         <div class="wrapper--avatars gap--xs">
           <div class="column gap--xs">
             <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-            <button class="btn btn--primary">Justyna Chojnacka</button>
+            <button class="btn btn--primary" @click="dialogState = true">
+              Justyna Chojnacka
+            </button>
           </div>
         </div>
       </div>
       <div class="wrapper--avatars gap--xs">
         <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary">Olga Szlifirczyk</button>
+          <button class="btn btn--primary" @click="dialogState = true">
+            Olga Szlifirczyk
+          </button>
         </div>
       </div>
     </div>
@@ -35,12 +43,16 @@
       <div class="wrapper--avatars gap--xs">
         <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary">Krzysztof Rafalik</button>
+          <button class="btn btn--primary" @click="dialogState = true">
+            Krzysztof Rafalik
+          </button>
         </div>
         <div class="wrapper--avatars gap--xs">
           <div class="column gap--xs">
             <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-            <button class="btn btn--primary">Oparcik Grzegorz</button>
+            <button class="btn btn--primary" @click="dialogState = true">
+              Oparcik Grzegorz
+            </button>
           </div>
         </div>
       </div>
@@ -55,13 +67,16 @@
     </div>
   </div>
   <GDialog v-model="dialogState">
-    <span class="text-black"> Content </span>
+    <Siema></Siema>
   </GDialog>
 </template>
 <script lang="ts">
+import TeamAvatar from "./TeamAvatarContent.vue";
 import { ref, defineComponent } from "vue";
-
+import Siema from "./Dialog.vue";
+import avatar from "../img/avatar.jpg";
 export default defineComponent({
+  components: { Siema },
   setup() {
     const dialogState = ref(false);
     return {
