@@ -57,6 +57,17 @@ export default defineComponent({
 });
 </script>
 <style lang="sass">
+.grid--companies
+  display: grid
+  gap: var(--size-6)
+  margin-left: var(--size-8)
+  margin-right: var(--size-8)
+  grid-template-columns: repeat(4,1fr)
+  grid-template-rows: 1fr
+  @media (max-width: 1024px)
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+
 .title--header
   text-align: center
   width: var(--size-fluid-10)

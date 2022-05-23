@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
+    "gitart-vue-dialog": "^2.0.5",
     "open-props": "^1.3.16",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
+    "@types/node": "^17.0.35",
     "@vitejs/plugin-vue": "^2.3.3",
     "node-sass": "^7.0.1",
     "postcss-cli": "^9.1.0",

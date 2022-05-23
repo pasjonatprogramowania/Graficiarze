@@ -1,7 +1,11 @@
 <template>
-  <h2 class="h2 bg--primary title--header p--md">Social Mediów</h2>
+  <h2 class="h2 bg--primary title--header p--md">Promocji projektu</h2>
   <div class="grid--social">
-    <Card v-for="(company, i) in socialMediaData" :key="`${i}-media`">
+    <Card
+      v-for="(company, i) in socialMediaData"
+      :key="`${i}-media`"
+      :class="`img--${i}`"
+    >
       <template #company-img>
         <img class="img--companies img--social" :src="company.img" alt="" />
       </template>
@@ -51,6 +55,25 @@ export default defineComponent({
 });
 </script>
 <style lang="sass">
+.grid--social
+  display: grid
+  gap: var(--size-6)
+  margin-left: var(--size-8)
+  margin-right: var(--size-8)
+  grid-template-columns: repeat(3,1fr)
+  grid-template-areas: "img1 img2 img3"
+  grid-template-rows: 1fr
+  @media (max-width: 1024px)
+    grid-template-columns: repeat(2,1fr)
+    grid-template-rows: repeat(2,1fr)
+    grid-template-areas: "img1 img2""img3 img3"
+
+.img--1
+  grid-area: img1
+.img--2
+  grid-area: img2
+.img--3
+  grid-area: img3
 .img--social
   width: var(--size-11)
 </style>

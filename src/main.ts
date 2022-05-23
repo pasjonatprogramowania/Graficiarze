@@ -8,4 +8,11 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 });
-createApp(App).use(router).mount('#app');
+
+// main.js
+import 'gitart-vue-dialog/dist/style.css';
+import { GDialog } from 'gitart-vue-dialog';
+
+
+
+createApp(App).use(router).component('GDialog', GDialog).mount('#app');

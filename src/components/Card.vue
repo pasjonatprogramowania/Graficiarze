@@ -20,7 +20,6 @@ export default defineComponent({
 .container-card
   margin-left: auto
   margin-right: auto
-  max-width: 800px
   border-radius: var(--size-3)
   display: grid
   grid-template-rows: var(--size-12) var(--size-9) auto

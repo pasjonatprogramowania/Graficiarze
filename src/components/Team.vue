@@ -47,16 +47,28 @@
       <div class="wrapper--avatars gap--xs">
         <div class="column gap--xs">
           <img src="../img/avatar.jpg" class="img--avatar" alt="" />
-          <button class="btn btn--primary">Robert Mikulski</button>
+          <button class="btn btn--primary" @click="dialogState = true">
+            Robert Mikulski
+          </button>
         </div>
       </div>
     </div>
   </div>
+  <GDialog v-model="dialogState">
+    <span class="text-black"> Content </span>
+  </GDialog>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { ref, defineComponent } from "vue";
 
-export default defineComponent({});
+export default defineComponent({
+  setup() {
+    const dialogState = ref(false);
+    return {
+      dialogState,
+    };
+  },
+});
 </script>
 <style lang="sass">
 @media (max-width:1224px)
