@@ -9,17 +9,17 @@
     </div>
   </div>
   <div>
-    <img src="../img/scroll.gif" class="icon--md img--scroll" alt="" />
+    <img src="../../img/Hero/scroll.gif" class="icon--md img--scroll" alt="" />
   </div>
 </template>
 <script lang='ts'>
 import { defineComponent } from "vue";
-import logo from "../img/logo.svg";
+import logo from "../../img/Hero/logo.svg";
 export default defineComponent({
   components: { logo },
 });
 </script>
-<style lang='sass'>
+<style lang='sass' >
 .img--scroll
   margin-top: 20px
   margin-left: auto
@@ -35,7 +35,7 @@ export default defineComponent({
 .banner--hero
   width: 100vw
   min-height: var(--size-fluid-10)
-  background-image: url("../img/hero.jpg")
+  background-image: url("../../img/Hero/hero.jpg")
   place-items: center
   display: grid
   background-position: center

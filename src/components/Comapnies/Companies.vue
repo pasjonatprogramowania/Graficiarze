@@ -18,11 +18,11 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import zhp from "../img/zhp.png";
-import mzdik from "../img/mzdik.png";
-import lop from "../img/lop.png";
-import zwzt from "../img/zwzt.png";
-import Card from "../components/Card.vue";
+import zhp from "../../img/companies/zhp.png";
+import mzdik from "../../img/companies/mzdik.png";
+import lop from "../../img/companies/lop.png";
+import zwzt from "../../img/companies/zwzt.png";
+import Card from "../Utilities/Card.vue";
 export default defineComponent({
   setup() {
     const companiesData = [
@@ -56,7 +56,7 @@ export default defineComponent({
   components: { Card },
 });
 </script>
-<style lang="sass">
+<style lang="sass" >
 .grid--companies
   display: grid
   gap: var(--size-6)

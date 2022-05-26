@@ -47,10 +47,10 @@
   </div>
 </template>
 <script lang="ts">
-import arrowLeft from "../img/arrow-story-left.svg";
-import arrowRight from "../img/arrow-story-right.svg";
+import arrowLeft from "../../img/arrows/arrow-story-left.svg";
+import arrowRight from "../../img/arrows/arrow-story-right.svg";
 import { defineComponent } from "vue";
-import TextField from "./TextField.vue";
+import TextField from "../Utilities/TextField.vue";
 export default defineComponent({
   components: { TextField, arrowLeft, arrowRight },
 });

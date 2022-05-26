@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper--main">
     <Navbar />
-
     <Hero />
     <main>
       <slot />
@@ -10,9 +9,9 @@
   </div>
 </template>
 <script lang="ts">
-import Hero from "../components/Hero.vue";
-import Footer from "../components/Footer.vue";
-import Navbar from "../components/Navbar.vue";
+import Hero from "../components/Hero/Hero.vue";
+import Footer from "../components/footer/Footer.vue";
+import Navbar from "../components/Nav/Navbar.vue";
 import { defineComponent } from "vue";
 export default defineComponent({
   components: { Navbar, Footer, Hero },

@@ -1,10 +1,10 @@
 <template>
   <div class="bg--gray container--wrapper-team">
     <div class="container-team--solo">
-      <h3 class="h3 team--name">Lider</h3>
+      <h2 class="h2 team--name">Lider</h2>
       <TeamAvatar
         v-for="(member, i) in leaderTeam"
-        :img="member.img"
+        :avatar="member.avatar"
         :name="member.name"
         :teamMemberData="member.teamMemberData"
         :key="member.name"
@@ -13,10 +13,10 @@
       ></TeamAvatar>
     </div>
     <div class="container-team">
-      <h3 class="h3 team--name">Graficy</h3>
+      <h2 class="h2 team--name">Graficy</h2>
       <TeamAvatar
         v-for="(member, i) in graffitiTeam"
-        :img="member.img"
+        :avatar="member.avatar"
         :name="member.name"
         :teamMemberData="member.teamMemberData"
         :key="member.name"
@@ -25,10 +25,10 @@
       ></TeamAvatar>
     </div>
     <div class="container-team">
-      <h3 class="h3 team--name">Sociale</h3>
+      <h2 class="h2 team--name">Sociale</h2>
       <TeamAvatar
         v-for="(member, i) in socialTeam"
-        :img="member.img"
+        :avatar="member.avatar"
         :name="member.name"
         :teamMemberData="member.teamMemberData"
         :key="member.name"
@@ -40,32 +40,34 @@
   </div>
   <GDialog v-model="dialogState">
     <h1>{{ dataToRender }}</h1>
-    <Siema> </Siema>
+    <DialogContent> </DialogContent>
   </GDialog>
 </template>
 <script lang="ts">
 import TeamAvatar from "./TeamAvatar.vue";
 import { ref, defineComponent } from "vue";
-import Siema from "./Dialog.vue";
-import img from "../img/avatar.jpg";
+import DialogContent from "../Utilities/Dialog.vue";
+import {
+  PawelSzewczyk,
+  AsiaZiolczynska,
+  JustynaChojnacka,
+  KrzysztofRafalik,
+  OparcikGrzegorz,
+  RobertMikulski,
+  OlgaSzlifirczyk,
+} from "../../data/teamData";
 export default defineComponent({
-  components: { Siema, TeamAvatar },
+  components: { DialogContent, TeamAvatar },
   setup() {
     const dataToRender = ref([]);
     const dialogState = ref(false);
-    const socialTeam = ref([
-      { img: img, name: "Krzysztof Rafalik", teamMemberData: [{ ala: "aaa" }] },
-      { img: img, name: "Oparcik Grzegorz", teamMemberData: [{ ala: "bbbb" }] },
-      { img: img, name: "Robert Mikulski", teamMemberData: [] },
-    ]);
+    const socialTeam = ref([KrzysztofRafalik, OparcikGrzegorz, RobertMikulski]);
     const graffitiTeam = ref([
-      { img: img, name: "Asia Ziółczyńska", teamMemberData: [] },
-      { img: img, name: "Justyna Chojnacka", teamMemberData: [] },
-      { img: img, name: "Olga Szlifirczyk", teamMemberData: [] },
+      AsiaZiolczynska,
+      JustynaChojnacka,
+      OlgaSzlifirczyk,
     ]);
-    const leaderTeam = ref([
-      { img: img, name: "Paweł Szewczyk", teamMemberData: [] },
-    ]);
+    const leaderTeam = ref([PawelSzewczyk]);
     function openDialog(e) {
       dataToRender.value = e;
       dialogState.value = true;
@@ -81,7 +83,7 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="sass">
+<style lang="sass" >
 @media (max-width:1224px)
   .container--wrapper-team
     flex-direction: column

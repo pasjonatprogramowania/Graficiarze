@@ -12,7 +12,7 @@ export default defineComponent({
   },
 });
 </script>
-<style lang='sass'>
+<style lang='sass' >
 footer
   display: flex
   justify-content: center

@@ -1,6 +1,6 @@
 <template>
   <div class="column gap--xs">
-    <img :src="img" class="img--avatar" alt="" />
+    <img :src="avatar" class="img--avatar" alt="" />
     <button
       class="btn btn--primary btn-avatar"
       @click="openDialog(teamMemberData)"
@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 export default defineComponent({
-  props: { name: String, img: String, teamMemberData: Object },
+  props: { name: String, avatar: String, teamMemberData: Object },
   emits: ["openDialog"],
   setup(props, { emit }) {
     const dialogState = ref(false);
@@ -26,9 +26,8 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="sass" scoped>
+<style lang="sass">
 .btn-avatar
   margin-left: auto
   margin-right: auto
-  max-width: 250px
 </style>

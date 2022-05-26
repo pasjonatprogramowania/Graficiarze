@@ -14,10 +14,14 @@
           </p>
         </TextField>
         <div class="img--arrow-map">
-          <img class="icon--lg" src="../img/arrow-map.svg" alt="" />
+          <img class="icon--lg" src="../../img/arrows/arrow-map.svg" alt="" />
         </div>
         <div class="container-about--btn-map">
-          <img class="icon--lg icon--map" src="../img/map.svg" alt="" />
+          <img
+            class="icon--lg icon--map"
+            src="../../img/About/map.svg"
+            alt=""
+          />
           <button class="btn btn--primary">lorem ipsum</button>
         </div>
       </div>
@@ -25,11 +29,11 @@
   </div>
 </template>
 <script lang='ts'>
-import TextField from "./TextField.vue";
+import TextField from "../Utilities/TextField.vue";
 import { defineComponent } from "vue";
 export default defineComponent({ components: { TextField } });
 </script>
-<style lang="sass">
+<style lang="sass" >
 .icon--map
   margin-right: auto
   margin-left: auto

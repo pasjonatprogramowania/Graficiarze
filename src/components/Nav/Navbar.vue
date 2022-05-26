@@ -25,12 +25,11 @@
   </nav>
 </template>
 <script lang="ts">
-import WaverShape from "../components/WaverShape.vue";
-import menuIcon from "../icons/manu.svg";
-import logo from "../img/logo.svg";
+import WaverShape from "./WaverShape.vue";
+import menuIcon from "../../icons/manu.svg";
 import { defineComponent, ref } from "vue";
 export default defineComponent({
-  components: { menuIcon, logo, WaverShape },
+  components: { menuIcon, WaverShape },
   setup() {
     const isNavBarExpanded = ref("false");
     const navLink = [
@@ -60,7 +59,7 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="sass">
+<style lang="sass" >
 a
   margin-left: auto
   margin-right: auto

@@ -21,9 +21,9 @@
   </div>
 </template>
 <script lang="ts">
-import rohis from "../img/rohis.png";
+import rohis from "../../img/companies/rohis.png";
 import { defineComponent } from "vue";
-import Card from "../components/Card.vue";
+import Card from "../Utilities/Card.vue";
 export default defineComponent({
   setup() {
     const companiesData = [
@@ -39,7 +39,7 @@ export default defineComponent({
   components: { Card },
 });
 </script>
-<style lang="sass">
+<style lang="sass" >
 .grid--budget
   display: grid
   gap: var(--size-6)

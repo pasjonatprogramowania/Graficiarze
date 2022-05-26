@@ -21,12 +21,11 @@
   </div>
 </template>
 <script lang="ts">
-import Card from "../components/Card.vue";
-
+import Card from "../Utilities/Card.vue";
 import { defineComponent } from "vue";
-import fb from "../img/fb.png";
-import tiktok from "../img/tiktok.png";
-import librus from "../img/librus.png";
+import fb from "../../img/companies/fb.png";
+import tiktok from "../../img/companies/tiktok.png";
+import librus from "../../img/companies/librus.png";
 export default defineComponent({
   components: { Card },
   setup() {
@@ -54,7 +53,7 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="sass">
+<style lang="sass" >
 .grid--social
   display: grid
   gap: var(--size-6)
