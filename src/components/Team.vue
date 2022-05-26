@@ -6,6 +6,7 @@
         v-for="(member, i) in leaderTeam"
         :img="member.img"
         :name="member.name"
+        :teamMemberData="member.teamMemberData"
         :key="member.name"
         :class="`member-${i}`"
         @openDialog="openDialog"
@@ -17,6 +18,7 @@
         v-for="(member, i) in graffitiTeam"
         :img="member.img"
         :name="member.name"
+        :teamMemberData="member.teamMemberData"
         :key="member.name"
         :class="`member-${i}`"
         @openDialog="openDialog"
@@ -28,6 +30,7 @@
         v-for="(member, i) in socialTeam"
         :img="member.img"
         :name="member.name"
+        :teamMemberData="member.teamMemberData"
         :key="member.name"
         isDialogOpen
         :class="`member-${i}`"
@@ -36,9 +39,8 @@
     </div>
   </div>
   <GDialog v-model="dialogState">
-    <Siema
-      ><h1>{{ kot }}</h1></Siema
-    >
+    <h1>{{ dataToRender }}</h1>
+    <Siema> </Siema>
   </GDialog>
 </template>
 <script lang="ts">
@@ -49,31 +51,23 @@ import img from "../img/avatar.jpg";
 export default defineComponent({
   components: { Siema, TeamAvatar },
   setup() {
+    const dataToRender = ref([]);
     const dialogState = ref(false);
     const socialTeam = ref([
-      { img: img, name: "Krzysztof Rafalik" },
-      { img: img, name: "Oparcik Grzegorz" },
-      { img: img, name: "Robert Mikulski" },
+      { img: img, name: "Krzysztof Rafalik", teamMemberData: [{ ala: "aaa" }] },
+      { img: img, name: "Oparcik Grzegorz", teamMemberData: [{ ala: "bbbb" }] },
+      { img: img, name: "Robert Mikulski", teamMemberData: [] },
     ]);
     const graffitiTeam = ref([
-      { img: img, name: "Asia Ziółczyńska" },
-      { img: img, name: "Justyna Chojnacka" },
-      { img: img, name: "Olga Szlifirczyk" },
+      { img: img, name: "Asia Ziółczyńska", teamMemberData: [] },
+      { img: img, name: "Justyna Chojnacka", teamMemberData: [] },
+      { img: img, name: "Olga Szlifirczyk", teamMemberData: [] },
     ]);
-    const kot = ref("");
-    const leaderTeam = ref([{ img: img, name: "Paweł Szewczyk" }]);
+    const leaderTeam = ref([
+      { img: img, name: "Paweł Szewczyk", teamMemberData: [] },
+    ]);
     function openDialog(e) {
-      switch (e) {
-        case "Krzysztof Rafalik":
-          kot.value = "aaa";
-        case "Oparcik Grzegorz":
-          kot.value = "ccc";
-        case "Robert Mikulski":
-        case "Asia Ziółczyńska":
-        case "Justyna Chojnacka":
-        case "Olga Szlifirczyk":
-        case "Paweł Szewczyk":
-      }
+      dataToRender.value = e;
       dialogState.value = true;
     }
     return {
@@ -82,7 +76,7 @@ export default defineComponent({
       socialTeam,
       openDialog,
       dialogState,
-      kot,
+      dataToRender,
     };
   },
 });

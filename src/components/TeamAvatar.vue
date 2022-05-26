@@ -1,17 +1,18 @@
 <template>
   <div class="column gap--xs">
     <img :src="img" class="img--avatar" alt="" />
-    <button class="btn btn--primary btn-avatar" @click="openDialog(name)">
+    <button
+      class="btn btn--primary btn-avatar"
+      @click="openDialog(teamMemberData)"
+    >
       {{ name }}
     </button>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import Siema from "./Dialog.vue";
 export default defineComponent({
-  component: { Siema },
-  props: { name: String, img: String },
+  props: { name: String, img: String, teamMemberData: Object },
   emits: ["openDialog"],
   setup(props, { emit }) {
     const dialogState = ref(false);
@@ -29,4 +30,5 @@ export default defineComponent({
 .btn-avatar
   margin-left: auto
   margin-right: auto
+  max-width: 250px
 </style>
