@@ -23,7 +23,7 @@
 <script lang="ts">
 import rohis from "../../img/companies/rohis.png";
 import { defineComponent } from "vue";
-import Card from "../Utilities/Card.vue";
+import Card from "../Card.vue";
 export default defineComponent({
   setup() {
     const companiesData = [

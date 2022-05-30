@@ -29,7 +29,7 @@
   </div>
 </template>
 <script lang='ts'>
-import TextField from "../Utilities/TextField.vue";
+import TextField from "../TextField.vue";
 import { defineComponent } from "vue";
 export default defineComponent({ components: { TextField } });
 </script>

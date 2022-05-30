@@ -39,14 +39,13 @@
     </div>
   </div>
   <GDialog v-model="dialogState">
-    <h1>{{ dataToRender }}</h1>
-    <DialogContent> </DialogContent>
+    <DialogContent :dataToRender="dataToRender"></DialogContent>
   </GDialog>
 </template>
 <script lang="ts">
 import TeamAvatar from "./TeamAvatar.vue";
 import { ref, defineComponent } from "vue";
-import DialogContent from "../Utilities/Dialog.vue";
+import DialogContent from "../Dialog.vue";
 import {
   PawelSzewczyk,
   AsiaZiolczynska,

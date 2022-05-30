@@ -30,4 +30,5 @@ export default defineComponent({
 .btn-avatar
   margin-left: auto
   margin-right: auto
+  min-width: 100px
 </style>

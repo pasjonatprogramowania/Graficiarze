@@ -22,7 +22,7 @@ import zhp from "../../img/companies/zhp.png";
 import mzdik from "../../img/companies/mzdik.png";
 import lop from "../../img/companies/lop.png";
 import zwzt from "../../img/companies/zwzt.png";
-import Card from "../Utilities/Card.vue";
+import Card from "../Card.vue";
 export default defineComponent({
   setup() {
     const companiesData = [

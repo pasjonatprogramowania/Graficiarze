@@ -21,7 +21,7 @@
   </div>
 </template>
 <script lang="ts">
-import Card from "../Utilities/Card.vue";
+import Card from "../Card.vue";
 import { defineComponent } from "vue";
 import fb from "../../img/companies/fb.png";
 import tiktok from "../../img/companies/tiktok.png";
