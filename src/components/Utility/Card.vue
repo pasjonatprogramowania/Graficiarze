@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <div class="container-card bg--white">
-      <div class="container-card--img">
-        <slot name="company-img"> </slot>
-      </div>
-      <slot name="company-title"></slot>
-      <slot name="company-subtitle"></slot>
+  <div class="container-card bg--white">
+    <div class="container-card--img">
+      <slot name="company-img"> </slot>
     </div>
+    <slot name="company-title"></slot>
+    <slot name="company-subtitle"></slot>
   </div>
 </template>
 <script>
@@ -28,12 +26,10 @@ export default defineComponent({
   text-align: center
   overflow: hidden
   gap: var(--size-3)
-  @media (max-width: 900px)
+  @media (min-width: 1024px)
     max-width: 300px
     grid-template-rows: var(--size-12) var(--size-9) var(--size-12)
 .container-card--img
-  width: 100% !important
-  height: 100% !important
   display: grid
   place-items: center
   grid-area: image

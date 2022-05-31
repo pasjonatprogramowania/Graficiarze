@@ -1,6 +1,6 @@
 <template>
   <Title>Promocji projektu</Title>
-  <div class="grid--social">
+  <div class="grid--social margin-x--sm">
     <Card
       v-for="(company, i) in socialMediaData"
       :key="`${i}-media`"
@@ -28,7 +28,7 @@ import fb from "../../assets/img/companies/fb.png";
 import tiktok from "../../assets/img/companies/tiktok.png";
 import librus from "../../assets/img/companies/librus.png";
 export default defineComponent({
-  components: { Card },
+  components: { Card, Title },
   setup() {
     const socialMediaData = [
       {
@@ -50,7 +50,7 @@ export default defineComponent({
           "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
       },
     ];
-    return { socialMediaData, Title };
+    return { socialMediaData };
   },
 });
 </script>
@@ -58,22 +58,14 @@ export default defineComponent({
 .grid--social
   display: grid
   gap: var(--size-6)
-  margin-left: var(--size-8)
-  margin-right: var(--size-8)
   grid-template-columns: repeat(3,1fr)
-  grid-template-areas: "img1 img2 img3"
   grid-template-rows: 1fr
   @media (max-width: 1024px)
-    grid-template-columns: repeat(2,1fr)
-    grid-template-rows: repeat(2,1fr)
-    grid-template-areas: "img1 img2""img3 img3"
-
-.img--1
-  grid-area: img1
-.img--2
-  grid-area: img2
-.img--3
-  grid-area: img3
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+  @media (max-width: 700px)
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
 .img--social
   width: var(--size-11)
 </style>
