@@ -1,7 +1,7 @@
 <template>
-  <div class="team-grid gap--xs">
-    <img class="team-avatar--img" :src="img" alt="" />
-    <div class="team-avatar--description">
+  <div class="placat-grid gap--xs">
+    <img class="placat--img" :src="img" alt="" />
+    <div class="placat--description">
       <p class="h3">{{ name }}</p>
       <p class="h3">{{ role }}</p>
       <p>{{ description }}</p>
@@ -15,7 +15,7 @@ export default defineComponent({
 });
 </script>
 <style lang="sass">
-.team-grid
+.placat-grid
   text-align: center
   display: grid
   place-items: center
@@ -26,15 +26,12 @@ export default defineComponent({
     grid-template-rows: repeat(1,1fr)
     grid-template-columns: repeat(2,1fr)
     grid-template-areas: "img description"
-    &:nth-child(2)
+    &:nth-child(odd)
       grid-template-areas: "description img"
-    &:nth-child(4)
-      grid-template-areas: "description img"
-    &:nth-child(6)
-      grid-template-areas: "description img"
-.team-avatar--img
+
+.placat--img
   grid-area: img
-  width: 300px
-.team-avatar--description
+  width: 400px
+.placa--description
   grid-area: description
 </style>

@@ -6,12 +6,14 @@
     <Companies />
     <Budget />
     <SocialMedia />
+    <Gallery />
   </MainLayout>
 </template>
 <script lang="ts">
 import Companies from "../components/Comapnies/Partners.vue";
 
 import Budget from "../components/Comapnies/Budget.vue";
+import Gallery from "../components/Gallery.vue";
 import SocialMedia from "../components/Comapnies/SocialMedia.vue";
 import Team from "../components/Team/Team.vue";
 import Story from "../components/Story.vue";
@@ -27,6 +29,7 @@ export default defineComponent({
     Companies,
     Budget,
     SocialMedia,
+    Gallery,
   },
 });
 </script>

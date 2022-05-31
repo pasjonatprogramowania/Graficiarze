@@ -1,5 +1,5 @@
 <template>
-  <div class="margin-x--lg">
+  <div class="">
     <div class="column gap--sm">
       <div class="column--start gap--sm">
         <TextField>

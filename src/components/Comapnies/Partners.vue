@@ -1,6 +1,6 @@
 <template>
   <Title>Współpracy z...</Title>
-  <div class="companies-grid margin-x--sm">
+  <div class="companies-grid">
     <Card v-for="(company, i) in companiesData" :key="`${i}-company`">
       <template #company-img>
         <img class="img--companies" :src="company.img" alt="" />

@@ -1,6 +1,6 @@
 <template>
   <Title>Pozyskiwania funduszy</Title>
-  <div class="companies-grid companies-grid--budget margin-x--sm">
+  <div class="companies-grid companies-grid--budget">
     <Card
       v-for="(company, i) in companiesData"
       :key="`${i}-budget`"

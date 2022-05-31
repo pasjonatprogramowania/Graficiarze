@@ -1,6 +1,6 @@
 <template>
   <Title>Poznaj zespół</Title>
-  <div class="margin-x--md column gap--md">
+  <div class="column gap--md">
     <TeamAvatar
       v-for="(member, i) in memberData"
       :key="`${i}-member`"
@@ -13,7 +13,7 @@
   </div>
 </template>
 <script lang="ts">
-import TeamAvatar from "./TeamAvatar.vue";
+import TeamAvatar from "../Utility/Placat.vue";
 import { defineComponent } from "vue";
 import Title from "../Utility/Title.vue";
 import { TeamMemberData } from "../../assets/data/teamMember";

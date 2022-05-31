@@ -1,6 +1,6 @@
 <template>
   <Title>Promocji projektu</Title>
-  <div class="companies-grid margin-x--sm">
+  <div class="companies-grid">
     <Card
       v-for="(company, i) in socialMediaData"
       :key="`${i}-media`"
