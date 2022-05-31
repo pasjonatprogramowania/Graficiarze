@@ -1,5 +1,5 @@
 <template>
-  <h2 class="h2 bg--primary title--header p--md"><slot /></h2>
+  <h2 class="h2 bg--primary title--header p--md" v-motion-slide-visible-once-bottom><slot /></h2>
 </template>
 <style lang="sass">
 .title--header

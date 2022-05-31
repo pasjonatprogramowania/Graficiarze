@@ -1,7 +1,7 @@
 <template>
-  <div class="placat-grid gap--xs">
-    <img class="placat--img" :src="img" alt="" />
-    <div class="placat--description">
+  <div class="placat-grid gap--xs" v-motion-slide-visible-once-bottom>
+    <img class="placat--img" :src="img" alt="" v-motion-slide-visible-once-right/>
+    <div class="placat--description" v-motion-slide-visible-once-left>
       <p class="h3">{{ name }}</p>
       <p class="h3">{{ role }}</p>
       <p>{{ description }}</p>
@@ -28,6 +28,7 @@ export default defineComponent({
     grid-template-areas: "img description"
     &:nth-child(odd)
       grid-template-areas: "description img"
+
 
 .placat--img
   grid-area: img

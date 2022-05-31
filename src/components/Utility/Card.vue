@@ -1,5 +1,5 @@
 <template>
-  <div class="container-card bg--white">
+  <div class="container-card bg--white" v-motion-slide-visible-once-left>
     <div class="container-card--img">
       <slot name="company-img"> </slot>
     </div>
@@ -7,13 +7,6 @@
     <slot name="company-subtitle"></slot>
   </div>
 </template>
-<script>
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  setup() {},
-});
-</script>
 <style lang="sass">
 .container-card
   width: 100%
@@ -41,4 +34,6 @@ export default defineComponent({
   justify-content: center
   grid-area: text
   display: flex
+.img--social
+  width: var(--size-11)
 </style>

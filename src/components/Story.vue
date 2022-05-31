@@ -2,7 +2,7 @@
   <div class="margin-x--lg">
     <div class="column gap--sm">
       <div class="column--start gap--sm">
-        <TextField>
+        <TextField v-motion-slide-visible-once-left>
           <h2 class="h2">lorem ipsum</h2>
           <p class="text-about">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
@@ -13,10 +13,10 @@
             dolor excepturi consectetur possimus iste.
           </p>
         </TextField>
-        <arrowRight />
+        <arrowRight v-motion-slide-visible-once-left />
       </div>
       <div class="column--end gap--sm">
-        <TextField>
+        <TextField v-motion-slide-visible-once-right>
           <h2 class="h2">lorem ipsum</h2>
           <p class="text-about">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
@@ -28,10 +28,10 @@
           </p>
           <button class="btn btn--primary">Nasz Facebook</button>
         </TextField>
-        <arrowLeft />
+        <arrowLeft v-motion-slide-visible-once-right/>
       </div>
       <div class="column--start gap--sm">
-        <TextField>
+        <TextField v-motion-slide-visible-once-left>
           <h2 class="h2">lorem ipsum</h2>
           <p class="text-about">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore

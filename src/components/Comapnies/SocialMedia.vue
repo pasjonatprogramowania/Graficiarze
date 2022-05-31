@@ -49,6 +49,5 @@ const socialMediaData = [
 ];
 </script>
 <style lang="sass" >
-.img--social
-  width: var(--size-11)
+
 </style>
