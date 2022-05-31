@@ -1,5 +1,5 @@
 <template>
-  <h2 class="h2 bg--primary title--header p--md">Pozyskiwania funduszy</h2>
+  <Title>Pozyskiwania funduszy</Title>
   <div class="grid--budget">
     <Card
       v-for="(company, i) in companiesData"
@@ -21,9 +21,10 @@
   </div>
 </template>
 <script lang="ts">
-import rohis from "../../img/companies/rohis.png";
+import Title from "../Utility/Title.vue";
+import rohis from "../../assets/img/companies/rohis.png";
 import { defineComponent } from "vue";
-import Card from "../Card.vue";
+import Card from "../Utility/Card.vue";
 export default defineComponent({
   setup() {
     const companiesData = [
@@ -36,7 +37,7 @@ export default defineComponent({
     ];
     return { companiesData };
   },
-  components: { Card },
+  components: { Card, Title },
 });
 </script>
 <style lang="sass" >

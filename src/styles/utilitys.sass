@@ -44,7 +44,6 @@
   font-size: var(--font-size-fluid-1)
   font-weight: 600
   line-height: 1.1
-
 .shadow
   box-shadow: var(--shadow-3)
 .text-about
@@ -105,6 +104,12 @@
     @media (min-width:900px)
       margin-left: var(--size-fluid-9)
       margin-right: var(--size-fluid-9)
+  &--md
+    margin-left: var(--size-fluid-3)
+    margin-right: var(--size-fluid-3)
+    @media (min-width:900px)
+      margin-left: var(--size-fluid-7)
+      margin-right: var(--size-fluid-7)
 .wrapper
   display: flex
   justify-content: center
@@ -155,9 +160,9 @@
     gap: var(--size-fluid-2)
   &--sm
     gap: var(--size-fluid-4)
+  &--md
+    gap: var(--size-fluid-6)
 
 @media (max-width: 1440px)
   .only-desktop
     display: none
-
-

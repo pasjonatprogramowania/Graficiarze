@@ -9,12 +9,16 @@
     </div>
   </div>
   <div>
-    <img src="../../img/Hero/scroll.gif" class="icon--md img--scroll" alt="" />
+    <img
+      src="../assets/img/Hero/scroll.gif"
+      class="icon--md img--scroll"
+      alt=""
+    />
   </div>
 </template>
 <script lang='ts'>
 import { defineComponent } from "vue";
-import logo from "../../img/Hero/logo.svg";
+import logo from "../assets/img/Hero/logo.svg";
 export default defineComponent({
   components: { logo },
 });
@@ -35,7 +39,7 @@ export default defineComponent({
 .banner--hero
   width: 100vw
   min-height: var(--size-fluid-10)
-  background-image: url("../../img/Hero/hero.jpg")
+  background-image: url("../assets/img/Hero/hero.jpg")
   place-items: center
   display: grid
   background-position: center

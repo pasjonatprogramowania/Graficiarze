@@ -1,5 +1,5 @@
 <template>
-  <h2 class="h2 bg--primary title--header p--md">Promocji projektu</h2>
+  <Title>Promocji projektu</Title>
   <div class="grid--social">
     <Card
       v-for="(company, i) in socialMediaData"
@@ -21,11 +21,12 @@
   </div>
 </template>
 <script lang="ts">
-import Card from "../Card.vue";
+import Title from "../Utility/Title.vue";
+import Card from "../Utility/Card.vue";
 import { defineComponent } from "vue";
-import fb from "../../img/companies/fb.png";
-import tiktok from "../../img/companies/tiktok.png";
-import librus from "../../img/companies/librus.png";
+import fb from "../../assets/img/companies/fb.png";
+import tiktok from "../../assets/img/companies/tiktok.png";
+import librus from "../../assets/img/companies/librus.png";
 export default defineComponent({
   components: { Card },
   setup() {
@@ -49,7 +50,7 @@ export default defineComponent({
           "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
       },
     ];
-    return { socialMediaData };
+    return { socialMediaData, Title };
   },
 });
 </script>

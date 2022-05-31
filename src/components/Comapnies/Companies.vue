@@ -1,5 +1,5 @@
 <template>
-  <h2 class="h2 bg--primary title--header p--md">Współpracy z...</h2>
+  <Title>Współpracy z...</Title>
   <div class="grid--companies">
     <Card v-for="(company, i) in companiesData" :key="`${i}-company`">
       <template #company-img>
@@ -18,11 +18,13 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import zhp from "../../img/companies/zhp.png";
-import mzdik from "../../img/companies/mzdik.png";
-import lop from "../../img/companies/lop.png";
-import zwzt from "../../img/companies/zwzt.png";
-import Card from "../Card.vue";
+import zhp from "../../assets/img/companies/zhp.png";
+import mzdik from "../../assets/img/companies/mzdik.png";
+import lop from "../../assets/img/companies/lop.png";
+import zwzt from "../../assets/img/companies/zwzt.png";
+import Card from "../Utility/Card.vue";
+import Title from "../Utility/Title.vue";
+
 export default defineComponent({
   setup() {
     const companiesData = [
@@ -53,7 +55,7 @@ export default defineComponent({
     ];
     return { companiesData };
   },
-  components: { Card },
+  components: { Card, Title },
 });
 </script>
 <style lang="sass" >
