@@ -108,8 +108,8 @@
     margin-left: var(--size-fluid-3)
     margin-right: var(--size-fluid-3)
     @media (min-width:900px)
-      margin-left: var(--size-fluid-7)
-      margin-right: var(--size-fluid-7)
+      margin-left: var(--size-fluid-8)
+      margin-right: var(--size-fluid-8)
   &--sm
     margin-left: var(--size-8)
     margin-right: var(--size-8)
@@ -169,3 +169,21 @@
 @media (max-width: 1440px)
   .only-desktop
     display: none
+
+.companies-grid
+  display: grid
+  gap: var(--size-6)
+  grid-template-columns: repeat(3,1fr)
+  grid-template-rows: 1fr
+  @media (max-width: 1024px)
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+  @media (max-width: 700px)
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
+
+.mobile--column
+  @media (max-width:1024px)
+    display: flex
+    justify-content: center
+    flex-direction: column

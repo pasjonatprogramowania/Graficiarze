@@ -1,6 +1,6 @@
 <template>
   <Title>Pozyskiwania funduszy</Title>
-  <div class="grid--budget">
+  <div class="companies-grid companies-grid--budget margin-x--sm">
     <Card
       v-for="(company, i) in companiesData"
       :key="`${i}-budget`"
@@ -41,11 +41,7 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" >
-.grid--budget
-  display: grid
-  gap: var(--size-6)
-  margin-left: var(--size-8)
-  margin-right: var(--size-8)
-  grid-template-rows: 1fr
-  grid-template-columns: 1fr
+.companies-grid--budget
+  grid-template-rows: 1fr !important
+  grid-template-columns: 1fr !important
 </style>l

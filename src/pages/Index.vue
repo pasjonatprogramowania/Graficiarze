@@ -9,7 +9,7 @@
   </MainLayout>
 </template>
 <script lang="ts">
-import Companies from "../components/Comapnies/Companies.vue";
+import Companies from "../components/Comapnies/Partners.vue";
 
 import Budget from "../components/Comapnies/Budget.vue";
 import SocialMedia from "../components/Comapnies/SocialMedia.vue";

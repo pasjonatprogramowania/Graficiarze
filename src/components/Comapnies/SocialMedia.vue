@@ -1,6 +1,6 @@
 <template>
   <Title>Promocji projektu</Title>
-  <div class="grid--social margin-x--sm">
+  <div class="companies-grid margin-x--sm">
     <Card
       v-for="(company, i) in socialMediaData"
       :key="`${i}-media`"
@@ -55,17 +55,6 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" >
-.grid--social
-  display: grid
-  gap: var(--size-6)
-  grid-template-columns: repeat(3,1fr)
-  grid-template-rows: 1fr
-  @media (max-width: 1024px)
-    grid-template-columns: 1fr 1fr
-    grid-template-rows: 1fr 1fr
-  @media (max-width: 700px)
-    grid-template-columns: 1fr
-    grid-template-rows: 1fr
 .img--social
   width: var(--size-11)
 </style>

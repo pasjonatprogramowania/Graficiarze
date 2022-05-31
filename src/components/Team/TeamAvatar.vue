@@ -1,5 +1,5 @@
 <template>
-  <div class="grid--avatar gap--xs">
+  <div class="team-grid gap--xs">
     <img class="team-avatar--img" :src="img" alt="" />
     <div class="team-avatar--description">
       <p class="h3">{{ name }}</p>
@@ -15,7 +15,7 @@ export default defineComponent({
 });
 </script>
 <style lang="sass">
-.grid--avatar
+.team-grid
   text-align: center
   display: grid
   place-items: center

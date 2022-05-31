@@ -1,6 +1,6 @@
 <template>
   <Title>Współpracy z...</Title>
-  <div class="grid--companies margin-x--sm">
+  <div class="companies-grid margin-x--sm">
     <Card v-for="(company, i) in companiesData" :key="`${i}-company`">
       <template #company-img>
         <img class="img--companies" :src="company.img" alt="" />
@@ -66,18 +66,6 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" >
-.grid--companies
-  display: grid
-  gap: var(--size-6)
-  grid-template-columns: repeat(3,1fr)
-  grid-template-rows: 1fr
-  @media (max-width: 1024px)
-    grid-template-columns: 1fr 1fr
-    grid-template-rows: 1fr 1fr
-  @media (max-width: 700px)
-    grid-template-columns: 1fr
-    grid-template-rows: 1fr
-
 .title--header
   text-align: center
   width: var(--size-fluid-10)
