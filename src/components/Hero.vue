@@ -34,7 +34,7 @@ import logo from "../assets/img/Hero/logo.svg?component";
   background-color: hsl(var(--white))
 
 .banner--hero
-  width: 100vw
+  width: 100%
   min-height: var(--size-fluid-10)
   background-image: url("../assets/img/Hero/hero.jpg")
   place-items: center

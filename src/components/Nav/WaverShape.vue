@@ -20,7 +20,7 @@ export default defineComponent({});
 .container
   z-index: 10
   position: relative
-  width: 100vw
+  width: 100%
 .custom-shape-divider-top-1652426427
   position: absolute
   top: 0

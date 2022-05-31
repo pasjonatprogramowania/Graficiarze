@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav">
     <div class="nav-wrapper">
       <button
         class="bg--primary btn--menu"

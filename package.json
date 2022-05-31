@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/motion": "^2.0.0-beta.12",
     "autoprefixer": "^10.4.7",
     "gitart-vue-dialog": "^2.0.5",
     "open-props": "^1.3.16",
