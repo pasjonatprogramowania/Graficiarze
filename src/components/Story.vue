@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="margin-x--lg">
     <div class="column gap--sm">
       <div class="column--start gap--sm">
         <TextField>
@@ -47,8 +47,9 @@
   </div>
 </template>
 <script lang="ts">
-import arrowLeft from "../assets/img/arrows/arrow-story-left.svg";
-import arrowRight from "../assets/img/arrows/arrow-story-right.svg";
+/// <reference types="vite-svg-loader" />
+import arrowLeft from "../assets/img/arrows/arrow-story-left.svg?component";
+import arrowRight from "../assets/img/arrows/arrow-story-right.svg?component";
 import { defineComponent } from "vue";
 import TextField from "./Utility/TextField.vue";
 export default defineComponent({

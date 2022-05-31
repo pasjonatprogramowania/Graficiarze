@@ -4,5 +4,6 @@ import svgLoader from 'vite-svg-loader';
 import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [vue(), svgLoader(),tsconfigPaths()],
+    base: '/Graficiarze-site/',
+    plugins: [vue(), svgLoader(), tsconfigPaths()],
 });

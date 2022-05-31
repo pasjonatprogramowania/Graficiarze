@@ -17,8 +17,9 @@
   </div>
 </template>
 <script lang='ts'>
+/// <reference types="vite-svg-loader" />
 import { defineComponent } from "vue";
-import logo from "../assets/img/Hero/logo.svg";
+import logo from "../assets/img/Hero/logo.svg?component";
 export default defineComponent({
   components: { logo },
 });

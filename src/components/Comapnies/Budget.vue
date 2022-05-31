@@ -40,7 +40,7 @@ export default defineComponent({
   components: { Card, Title },
 });
 </script>
-<style lang="sass" >
+<style lang="sass">
 .companies-grid--budget
   grid-template-rows: 1fr !important
   grid-template-columns: 1fr !important

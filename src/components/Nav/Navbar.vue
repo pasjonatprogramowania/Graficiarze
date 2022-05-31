@@ -25,13 +25,14 @@
   </nav>
 </template>
 <script lang="ts">
+/// <reference types="vite-svg-loader" />
 import WaverShape from "./WaverShape.vue";
-import menuIcon from "../../assets/icons/manu.svg";
+import menuIcon from "../../assets/icons/manu.svg?component";
 import { defineComponent, ref } from "vue";
 export default defineComponent({
-  components: { menuIcon, WaverShape },
+  components: { WaverShape, menuIcon },
   setup() {
-    const isNavBarExpanded = ref("false");
+    const isNavBarExpanded = ref(true);
     const navLink = [
       {
         name: "Strona główna",
@@ -50,9 +51,9 @@ export default defineComponent({
       },
     ];
     const changeMobileNavigationState = () => {
-      isNavBarExpanded.value === "false"
-        ? (isNavBarExpanded.value = "true")
-        : (isNavBarExpanded.value = "false");
+      isNavBarExpanded.value === true
+        ? (isNavBarExpanded.value = false)
+        : (isNavBarExpanded.value = true);
     };
 
     return { navLink, isNavBarExpanded, changeMobileNavigationState };

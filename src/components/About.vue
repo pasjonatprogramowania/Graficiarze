@@ -13,13 +13,11 @@
         </p>
       </TextField>
       <div class="img--arrow-map">
-        <img class="icon--lg" src="../assets/img/arrows/arrow-map.svg" alt="" />
+        <Arrow />
       </div>
       <div class="container-about--btn-map">
-        <img
+        <MapIcon
           class="icon--lg icon--map"
-          src="../assets/img/About/map.svg"
-          alt=""
         />
         <button class="btn btn--primary">lorem ipsum</button>
       </div>
@@ -27,9 +25,11 @@
   </div>
 </template>
 <script lang='ts'>
+import Arrow from "../assets/img/arrows/arrow-map.svg?component"
+import MapIcon from "../assets/img/About/map.svg?component"
 import TextField from "./Utility/TextField.vue";
 import { defineComponent } from "vue";
-export default defineComponent({ components: { TextField } });
+export default defineComponent({ components: { TextField,Arrow,MapIcon } });
 </script>
 <style lang="sass" >
 .icon--map
