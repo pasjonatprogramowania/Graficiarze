@@ -16,13 +16,9 @@
     />
   </div>
 </template>
-<script lang='ts'>
+<script lang='ts' setup>
 /// <reference types="vite-svg-loader" />
-import { defineComponent } from "vue";
 import logo from "../assets/img/Hero/logo.svg?component";
-export default defineComponent({
-  components: { logo },
-});
 </script>
 <style lang='sass' >
 .img--scroll

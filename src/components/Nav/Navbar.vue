@@ -24,41 +24,35 @@
     <WaverShape />
   </nav>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 /// <reference types="vite-svg-loader" />
 import WaverShape from "./WaverShape.vue";
 import menuIcon from "../../assets/icons/manu.svg?component";
-import { defineComponent, ref } from "vue";
-export default defineComponent({
-  components: { WaverShape, menuIcon },
-  setup() {
-    const isNavBarExpanded = ref(true);
-    const navLink = [
-      {
-        name: "Strona główna",
-        url: "/",
-        style: "transparent",
-      },
-      {
-        name: "Kontakt",
-        url: "#",
-        style: "transparent",
-      },
-      {
-        name: "Social media",
-        url: "#",
-        style: "transparent",
-      },
-    ];
-    const changeMobileNavigationState = () => {
-      isNavBarExpanded.value === true
-        ? (isNavBarExpanded.value = false)
-        : (isNavBarExpanded.value = true);
-    };
-
-    return { navLink, isNavBarExpanded, changeMobileNavigationState };
+import {ref} from'vue'
+const isNavBarExpanded = ref(true);
+const navLink = [
+  {
+    name: "Strona główna",
+    url: "/",
+    style: "transparent",
   },
-});
+  {
+    name: "Kontakt",
+    url: "#",
+    style: "transparent",
+  },
+  {
+    name: "Social media",
+    url: "#",
+    style: "transparent",
+  },
+];
+const changeMobileNavigationState = () => {
+  isNavBarExpanded.value === true
+    ? (isNavBarExpanded.value = false)
+    : (isNavBarExpanded.value = true);
+};
+
 </script>
 <style lang="sass" >
 a

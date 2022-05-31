@@ -46,13 +46,9 @@
     </div>
   </div>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 /// <reference types="vite-svg-loader" />
 import arrowLeft from "../assets/img/arrows/arrow-story-left.svg?component";
 import arrowRight from "../assets/img/arrows/arrow-story-right.svg?component";
-import { defineComponent } from "vue";
 import TextField from "./Utility/TextField.vue";
-export default defineComponent({
-  components: { TextField, arrowLeft, arrowRight },
-});
 </script>

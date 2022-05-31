@@ -12,19 +12,10 @@
     </TeamAvatar>
   </div>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import TeamAvatar from "../Utility/Placat.vue";
-import { defineComponent } from "vue";
 import Title from "../Utility/Title.vue";
 import { TeamMemberData } from "../../assets/data/teamMember";
-export default defineComponent({
-  setup() {
-    const memberData = TeamMemberData;
-    return { memberData };
-  },
-  components: { Title, TeamAvatar },
-});
-</script>
 
-<style lang="sass" >
-</style>
+const memberData = TeamMemberData;
+</script>

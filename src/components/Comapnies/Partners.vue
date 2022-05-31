@@ -16,8 +16,8 @@
     </Card>
   </div>
 </template>
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
+
 import emitel from "../../assets/img/companies/emitel.png";
 import zhp from "../../assets/img/companies/zhp.png";
 import mzdik from "../../assets/img/companies/mzdik.png";
@@ -26,44 +26,38 @@ import zwzt from "../../assets/img/companies/zwzt.png";
 import Card from "../Utility/Card.vue";
 import Title from "../Utility/Title.vue";
 
-export default defineComponent({
-  setup() {
-    const companiesData = [
-      {
-        img: zhp,
-        title: "Hufiec Radom-Miasto",
-        subtitle:
-          "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
-      },
-      {
-        img: emitel,
-        title: "Emitel",
-        subtitle:
-          "Dzieki wsparciu organizacji LOP, uzyskalismy potrzebne osobowość prawno do uzyskania pozwolenia na urzytek sciany od miasta",
-      },
-      {
-        img: lop,
-        title: "Liga Ochrony Przyrody",
-        subtitle:
-          "Dzieki wsparciu organizacji LOP, uzyskalismy potrzebne osobowość prawno do uzyskania pozwolenia na urzytek sciany od miasta",
-      },
-      {
-        img: mzdik,
-        title: "Miejski zarząd dróg i komunikacji",
-        subtitle:
-          "Udzieliło nam pozwolenia na uzytek scian przejscia podziemnego na Grzecznarowskiego jako strefe graffiti free  ",
-      },
-      {
-        img: zwzt,
-        title: "Zwolnieni z teorii",
-        subtitle:
-          "Otrzymalismy wsparcie merytoryczne, szkolenia z zakresu zarzadzania projektem, oraz promocji projektu w social mediach ",
-      },
-    ];
-    return { companiesData };
+const companiesData = [
+  {
+    img: zhp,
+    title: "Hufiec Radom-Miasto",
+    subtitle:
+      "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
   },
-  components: { Card, Title },
-});
+  {
+    img: emitel,
+    title: "Emitel",
+    subtitle:
+      "Dzieki wsparciu organizacji LOP, uzyskalismy potrzebne osobowość prawno do uzyskania pozwolenia na urzytek sciany od miasta",
+  },
+  {
+    img: lop,
+    title: "Liga Ochrony Przyrody",
+    subtitle:
+      "Dzieki wsparciu organizacji LOP, uzyskalismy potrzebne osobowość prawno do uzyskania pozwolenia na urzytek sciany od miasta",
+  },
+  {
+    img: mzdik,
+    title: "Miejski zarząd dróg i komunikacji",
+    subtitle:
+      "Udzieliło nam pozwolenia na uzytek scian przejscia podziemnego na Grzecznarowskiego jako strefe graffiti free  ",
+  },
+  {
+    img: zwzt,
+    title: "Zwolnieni z teorii",
+    subtitle:
+      "Otrzymalismy wsparcie merytoryczne, szkolenia z zakresu zarzadzania projektem, oraz promocji projektu w social mediach ",
+  },
+];
 </script>
 <style lang="sass" >
 .title--header

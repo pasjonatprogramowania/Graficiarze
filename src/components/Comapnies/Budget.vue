@@ -20,25 +20,17 @@
     </Card>
   </div>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import Title from "../Utility/Title.vue";
 import rohis from "../../assets/img/companies/rohis.png";
-import { defineComponent } from "vue";
 import Card from "../Utility/Card.vue";
-export default defineComponent({
-  setup() {
-    const companiesData = [
-      {
-        img: rohis,
-        title: "ROHiS",
-        subtitle:
-          "Z harcerskiego funduszu ROHiS pozyskaliśmy 1200zł na realizacje imprezy malarskiej w naszej strefie",
-      },
-    ];
-    return { companiesData };
-  },
-  components: { Card, Title },
-});
+const companiesData = [
+  {
+    img: rohis,
+    title: "ROHiS",
+    subtitle:
+      "Z harcerskiego funduszu ROHiS pozyskaliśmy 1200zł na realizacje imprezy malarskiej w naszej strefie",
+  }]
 </script>
 <style lang="sass">
 .companies-grid--budget

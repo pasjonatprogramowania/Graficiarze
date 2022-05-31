@@ -20,39 +20,33 @@
     </Card>
   </div>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import Title from "../Utility/Title.vue";
 import Card from "../Utility/Card.vue";
-import { defineComponent } from "vue";
 import fb from "../../assets/img/companies/fb.png";
 import tiktok from "../../assets/img/companies/tiktok.png";
 import librus from "../../assets/img/companies/librus.png";
-export default defineComponent({
-  components: { Card, Title },
-  setup() {
-    const socialMediaData = [
-      {
-        img: fb,
-        title: "Facebook",
-        subtitle:
-          "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
-      },
-      {
-        img: tiktok,
-        title: "TikTok",
-        subtitle:
-          "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
-      },
-      {
-        img: librus,
-        title: "Librus",
-        subtitle:
-          "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
-      },
-    ];
-    return { socialMediaData };
+
+const socialMediaData = [
+  {
+    img: fb,
+    title: "Facebook",
+    subtitle:
+      "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
   },
-});
+  {
+    img: tiktok,
+    title: "TikTok",
+    subtitle:
+      "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
+  },
+  {
+    img: librus,
+    title: "Librus",
+    subtitle:
+      "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
+  },
+];
 </script>
 <style lang="sass" >
 .img--social

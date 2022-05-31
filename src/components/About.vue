@@ -24,12 +24,10 @@
     </div>
   </div>
 </template>
-<script lang='ts'>
+<script lang='ts' setup>
 import Arrow from "../assets/img/arrows/arrow-map.svg?component"
 import MapIcon from "../assets/img/About/map.svg?component"
 import TextField from "./Utility/TextField.vue";
-import { defineComponent } from "vue";
-export default defineComponent({ components: { TextField,Arrow,MapIcon } });
 </script>
 <style lang="sass" >
 .icon--map
