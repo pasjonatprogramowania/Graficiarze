@@ -20,7 +20,7 @@
 /// <reference types="vite-svg-loader" />
 import logo from "../assets/img/Hero/logo.svg?component";
 </script>
-<style lang='sass' >
+<style lang='sass' scoped>
 .img--scroll
   margin-top: 20px
   margin-left: auto

@@ -29,7 +29,7 @@ import Arrow from "../assets/img/arrows/arrow-map.svg?component"
 import MapIcon from "../assets/img/About/map.svg?component"
 import TextField from "./Utility/TextField.vue";
 </script>
-<style lang="sass" >
+<style lang="sass" scoped>
 .icon--map
   margin-right: auto
   margin-left: auto

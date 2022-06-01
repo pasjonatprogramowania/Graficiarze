@@ -7,6 +7,9 @@
     :img="placat.img"
     :key="`placat-${i}`"
   />
+  <template>
+    
+  </template>
 </template>
 <script lang="ts" setup>
 import Title from "./Utility/Title.vue";

@@ -6,7 +6,7 @@
 <script lang="ts" setup>
   const curruentYear = new Date().getFullYear();
 </script>
-<style lang='sass' >
+<style lang="sass" scoped >
 footer
   display: flex
   justify-content: center
