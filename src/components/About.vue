@@ -2,38 +2,63 @@
   <div class="wrapper gap--sm">
     <div class="title-container--about gap--sm">
       <TextField>
-        <h2 class="h2">lorem ipsum</h2>
+        <h2 class="h2">O co chodzi?</h2>
         <p class="text-about">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quod
-          ea adipisci cumque odit ut ullam, rerum amet culpa totam atque beatae
-          sint quis quam nemo consequuntur eligendi ipsam minima quas dolorem
-          cum explicabo voluptatibus! Debitis quaerat voluptates, aliquam neque
-          mollitia nulla sapiente exercitationem vel, odit rerum dolor excepturi
-          consectetur possimus iste.
+          Zauważyliśmy ze w naszym mieście jest duży problem odnośnie
+          nielegalnych graffiti. Zaśmiecają one przestrzeń i niszczą otoczenie.
+          Aby walczyć z tym planujemy stworzyć razem strefę graffiti free gdzie
+          każdy legalnie będzie mógł malować. Ma ona na celu dac ludziom legalne
+          miejsce gdzie będą mogli sie wyszaleć, zamiast robić to tam gdzie byc
+          to nie powinno
         </p>
       </TextField>
-      <div class="img--arrow-map">
+      <div class="img--arrow-video">
         <Arrow />
       </div>
-      <div class="container-about--btn-map">
-        <MapIcon
-          class="icon--lg icon--map"
-        />
-        <button class="btn btn--primary">lorem ipsum</button>
+      <div class="container-about--btn-video">
+        <videoIcon class="icon--lg icon--video" />
+        <button
+          class="btn btn--primary"
+          @click="isDialogShowed = !isDialogShowed"
+        >
+          Zajawka o nas
+        </button>
       </div>
     </div>
   </div>
+  <GDialog v-model="isDialogShowed" @blur="isDialogShowed = false">
+    <div class="dialog-player">
+      <Artplayer :option="videoOption" :style="videoStyle"></Artplayer>
+    </div>
+  </GDialog>
 </template>
 <script lang='ts' setup>
-import Arrow from "../assets/img/arrows/arrow-map.svg?component"
-import MapIcon from "../assets/img/About/map.svg?component"
+import Artplayer from "./Utility/Artplayer.vue";
+import { ref } from "vue";
+import video from "../assets/videos/promo.mp4";
+const isDialogShowed = ref(false);
+const videoOption = {
+  container: ".artplayer-app",
+  url: video,
+};
+const videoStyle = {
+  width: "70vw",
+  height: "500px",
+};
+
+import Arrow from "../assets/img/arrows/arrow-video.svg?component";
+import videoIcon from "../assets/img/About/video.svg?component";
 import TextField from "./Utility/TextField.vue";
 </script>
 <style lang="sass" scoped>
-.icon--map
+.dialog-player
+  display: grid
+  place-items: center
+  padding: var(--size-fluid-4)
+.icon--video
   margin-right: auto
   margin-left: auto
-.container-about--btn-map
+.container-about--btn-video
   display: flex
   flex-direction: column
   justify-content: center
@@ -41,7 +66,7 @@ import TextField from "./Utility/TextField.vue";
 .title-container--about
   display: flex
   flex-direction: column
-.img--arrow-map
+.img--arrow-video
   display: flex
   justify-content: center
 </style>

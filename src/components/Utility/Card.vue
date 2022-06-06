@@ -1,5 +1,9 @@
 <template>
-  <div class="container-card bg--white" v-motion-slide-visible-once-left ref="target">
+  <div
+    class="container-card bg--white"
+    v-motion-slide-visible-once-left
+    ref="target"
+  >
     <div class="container-card--img">
       <slot name="company-img"> </slot>
     </div>
@@ -8,19 +12,9 @@
   </div>
 </template>
 <script setup>
-import { useMotion } from '@vueuse/motion'
-import { ref } from 'vue'
-const target = ref()
-
-// useMotion(target, {
-//     hover: {
-//         scale:1.1,
-//         duration:1,
-//         easing:spring(),
-//         repeat:Infinity,
-//         direction:"alternate"
-//     },
-// })
+// import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
+const target = ref();
 </script>
 <style lang="sass">
 .container-card

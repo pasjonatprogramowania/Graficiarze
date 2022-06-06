@@ -12,12 +12,12 @@
       </button>
       <ul class="nav-links" role="navigation">
         <li v-for="(link, index) in navLink" :key="index" role="none">
-          <a
+          <Applink
             :href="link.url"
             class="btn btn--link nav-link"
             :class="`btn--${link.style}`"
             >{{ link.name }}
-          </a>
+          </Applink>
         </li>
       </ul>
     </div>
@@ -26,9 +26,11 @@
 </template>
 <script lang="ts" setup>
 /// <reference types="vite-svg-loader" />
+import { FACEBOOK_URL } from "../../assets/data/links";
+import Applink from "../Utility/Applink.vue";
 import WaverShape from "./WaverShape.vue";
 import menuIcon from "../../assets/icons/manu.svg?component";
-import {ref} from'vue'
+import { ref } from "vue";
 const isNavBarExpanded = ref(true);
 const navLink = [
   {
@@ -37,13 +39,8 @@ const navLink = [
     style: "transparent",
   },
   {
-    name: "Kontakt",
-    url: "#",
-    style: "transparent",
-  },
-  {
     name: "Social media",
-    url: "#",
+    url: FACEBOOK_URL,
     style: "transparent",
   },
 ];
@@ -52,7 +49,6 @@ const changeMobileNavigationState = () => {
     ? (isNavBarExpanded.value = false)
     : (isNavBarExpanded.value = true);
 };
-
 </script>
 <style lang="sass" >
 a

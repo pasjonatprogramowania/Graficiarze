@@ -23,29 +23,8 @@
 <script lang="ts" setup>
 import Title from "../Utility/Title.vue";
 import Card from "../Utility/Card.vue";
-import fb from "../../assets/img/companies/fb.png";
-import tiktok from "../../assets/img/companies/tiktok.png";
-import librus from "../../assets/img/companies/librus.png";
+import { FB, TIKTOK, LIBRUS } from "../../assets/data/companies";
 
-const socialMediaData = [
-  {
-    img: fb,
-    title: "Facebook",
-    subtitle:
-      "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
-  },
-  {
-    img: tiktok,
-    title: "TikTok",
-    subtitle:
-      "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
-  },
-  {
-    img: librus,
-    title: "Librus",
-    subtitle:
-      "Organizowalismy razem impreze malarska promujaca strefe, oraz konkurs na najlepsze graffiit ktory dotarl do ponad 5tys osób",
-  },
-];
+const socialMediaData = [FB, TIKTOK, LIBRUS];
 </script>
 

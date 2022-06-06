@@ -21,16 +21,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import Title from "../Utility/Title.vue";
-import rohis from "../../assets/img/companies/rohis.png";
 import Card from "../Utility/Card.vue";
-const companiesData = [
-  {
-    img: rohis,
-    title: "ROHiS",
-    subtitle:
-      "Z harcerskiego funduszu ROHiS pozyskaliśmy 1200zł na realizacje imprezy malarskiej w naszej strefie",
-  }]
+import { ROHIS } from "../../assets/data/companies";
+const companiesData = [ROHIS];
 </script>
 <style lang="sass">
 .companies-grid--budget
