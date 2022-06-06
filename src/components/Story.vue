@@ -32,6 +32,19 @@
       </div>
       <div class="column--start gap--sm">
         <TextField v-motion-slide-visible-once-left>
+          <h2 class="h2">Jak Dostać pozwolenie?</h2>
+          <p class="text-about">
+            To dość łatwe w strefie znajduje się tabliczka informacyjna, po
+            prostu zgłoś to nam!
+          </p>
+          <div class="img--story">
+            <img :src="regulamin" alt="" />
+          </div>
+        </TextField>
+        <arrowRight v-motion-slide-visible-once-left />
+      </div>
+      <div class="column--end gap--sm">
+        <TextField v-motion-slide-visible-once-left>
           <h2 class="h2">Czego sie nauczyliśmy?</h2>
           <p class="text-about">
             Tworzenie projektu społecznego to duże wyzwanie, wymagało to od nas
@@ -42,14 +55,28 @@
             wiemy juz jak:
           </p>
         </TextField>
+        <arrowLeft v-motion-slide-visible-once-left />
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 /// <reference types="vite-svg-loader" />
+import regulamin from "../assets/img/story/regulamin.jpg";
 import Applink from "./Utility/Applink.vue";
 import arrowLeft from "../assets/img/arrows/arrow-story-left.svg?component";
 import arrowRight from "../assets/img/arrows/arrow-story-right.svg?component";
 import TextField from "./Utility/TextField.vue";
 </script>
+<style lang="sass">
+.img--story
+  width: 40vw
+  overflow: hidden
+  border-radius: var(--size-3)
+  @media (max-width: 1024px)
+    width: 50vw
+  @media (max-width: 900px)
+    width: 60vw
+  @media (max-width: 720px)
+    width: 80vw
+</style>

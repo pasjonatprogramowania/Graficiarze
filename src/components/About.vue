@@ -36,6 +36,9 @@
 import Artplayer from "./Utility/Artplayer.vue";
 import { ref } from "vue";
 import video from "../assets/videos/promo.mp4";
+import Arrow from "../assets/img/arrows/arrow-video.svg?component";
+import videoIcon from "../assets/img/About/video.svg?component";
+import TextField from "./Utility/TextField.vue";
 const isDialogShowed = ref(false);
 const videoOption = {
   container: ".artplayer-app",
@@ -45,10 +48,6 @@ const videoStyle = {
   width: "70vw",
   height: "500px",
 };
-
-import Arrow from "../assets/img/arrows/arrow-video.svg?component";
-import videoIcon from "../assets/img/About/video.svg?component";
-import TextField from "./Utility/TextField.vue";
 </script>
 <style lang="sass" scoped>
 .dialog-player
